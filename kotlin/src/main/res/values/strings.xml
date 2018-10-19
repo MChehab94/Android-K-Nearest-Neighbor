@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KNearestNeighbor</string>
+
+    <string-array name="distance_algorithms">
+        <item>Euclidean</item>
+        <item>Manhatten</item>
+        <item>Minkowski</item>
+    </string-array>
+
+</resources>

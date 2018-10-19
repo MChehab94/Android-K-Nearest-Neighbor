@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ParameterTuningActivity">
+
+    <LinearLayout style="@style/knn_linearlayout">
+
+        <TextView
+            style="@style/knn_textview"
+            android:text="K"/>
+
+        <EditText
+            android:id="@+id/editTextK"
+            style="@style/knn_edittext"/>
+
+    </LinearLayout>
+
+    <View style="@style/view_line"/>
+
+    <LinearLayout style="@style/knn_linearlayout">
+
+        <TextView
+            style="@style/knn_textview"
+            android:text="Split Ratio (0.5-1)"/>
+
+        <EditText
+            android:id="@+id/editTextSplitRatio"
+            style="@style/knn_edittext"
+            android:inputType="numberDecimal"/>
+
+    </LinearLayout>
+
+    <View style="@style/view_line"/>
+
+    <LinearLayout style="@style/knn_linearlayout"
+                  android:layout_marginTop="8dp">
+
+        <TextView
+            style="@style/knn_textview"
+            android:text="Distance Algorithm"/>
+
+        <Spinner
+            android:id="@+id/spinnerDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:entries="@array/distance_algorithms"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMinkowskiP"
+        style="@style/knn_linearlayout"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/knn_textview"
+            android:text="Select value for p"/>
+
+        <EditText
+            android:id="@+id/editTextMinkowski"
+            style="@style/knn_edittext"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonTune"
+        style="@style/generic"
+        android:layout_marginTop="8dp"
+        android:text="Tune"/>
+
+    <Button
+        android:id="@+id/buttonCancel"
+        style="@style/generic"
+        android:text="Cancel"/>
+
+</LinearLayout>

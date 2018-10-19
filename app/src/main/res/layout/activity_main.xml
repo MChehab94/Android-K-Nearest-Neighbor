@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <mchehab.com.knearestneighbor.DataPointCanvas
+        android:id="@+id/dataPointCanvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonTune"/>
+
+    <Button
+        android:id="@+id/buttonTune"
+        style="@style/generic"
+        android:text="Tune Parameters"
+        android:layout_above="@id/buttonPredict"/>
+
+    <Button
+        android:id="@+id/buttonPredict"
+        style="@style/generic"
+        android:text="Predict"
+        android:enabled="false"
+        android:layout_above="@id/buttonReset"/>
+
+    <Button
+        android:id="@+id/buttonReset"
+        style="@style/generic"
+        android:text="Reset"
+        android:layout_above="@id/textViewAccuracy"/>
+
+    <TextView
+        android:id="@+id/textViewAccuracy"
+        style="@style/generic"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
